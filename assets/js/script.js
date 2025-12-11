@@ -110,18 +110,18 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const category = link.getAttribute("data-category");
+      const category = link.getAttribute("data-category"); // kategori yang dipilih
 
-      // Active state di sidebar
+      // Active state sidebar
       categoryLinks.forEach((l) => l.classList.remove("active"));
       link.classList.add("active");
 
-      // Tampilkan / sembunyikan produk
+      // Filter produk
       productCards.forEach((card) => {
         const cardCategory = card.getAttribute("data-category");
 
-        if (category === "semua" || category === cardCategory) {
-          card.style.display = "flex";
+        if (category === "all" || category === cardCategory) {
+          card.style.display = "block";
         } else {
           card.style.display = "none";
         }
@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 })();
+
 
 // TIMER SEDERHANA UNTUK FLASH SALE (COUNTDOWN 1 JAM)
 (function () {

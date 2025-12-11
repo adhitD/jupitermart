@@ -4,10 +4,14 @@
     <ul>
       <?php 
       $query = "SELECT * FROM categories";
-      $result = mysqli_query($conn,$query);
+      $result = mysqli_query($conn,$query);?>
+     
+     
+    <li><a href="#" data-category="all" class="category-link ">semua</a></li>
+<?php 
       while($row = mysqli_fetch_assoc($result)) :
       ?>
-      <li><a href="#" data-category="<?=$row['name']?>" class="category-link "><?=$row['name']?></a></li>
+      <li><a href="#" data-category="<?=$row['id']?>" class="category-link "><?=$row['name']?></a></li>
       <?php endwhile ?>
      
     </ul>
