@@ -15,7 +15,7 @@
       <div class="login-header">
         <h2>Admin Login</h2>
       </div>
-      <form action="login_process.php" method="POST" class="login-form">
+      <form action="../databases/prosesLogin.php" method="POST" class="login-form">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" id="username" name="username" placeholder="Masukkan username" required>

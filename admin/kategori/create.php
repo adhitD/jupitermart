@@ -7,7 +7,7 @@
   </div>
 
   <div class="card">
-    <form action="store.php" method="POST">
+    <form action="../../databases/kategori/prosesCreate.php" method="POST">
       <div class="form-group">
         <label for="nama_kategori">Nama Kategori</label>
         <input type="text" id="nama_kategori" name="nama_kategori" placeholder="Masukkan nama kategori" required>
