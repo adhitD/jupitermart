@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style1.css">
+  <link rel="stylesheet" href="assets/css/style1.css">
   <title>AbdiMart Admin</title>
 </head>
 

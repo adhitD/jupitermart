@@ -1,3 +1,4 @@
+
 <?php include 'layouts/header.php'; ?>
 <?php include 'layouts/sidebar.php'; ?>
 <?php include '../databases/koneksi.php'; ?>
@@ -11,7 +12,9 @@
 
     <div class="card">
       <h4>Total Produk</h4>
-      <div class="value"><?= $total_produk ?></div>
+      <div class="value">
+       <?=$total_produk?>
+      </div>
     </div>
 
     <div class="card">

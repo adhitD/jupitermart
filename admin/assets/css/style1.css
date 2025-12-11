@@ -335,3 +335,14 @@ table td {
     overflow-x: auto;
   }
 }
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical; /* user bisa resize vertikal saja */
+  min-height: 100px; /* tinggi default */
+}

@@ -12,8 +12,9 @@ $admin_root = trim(BASE_URL, '/');
 
 $menu_items = [
   'Dashboard' => ['link' => BASE_URL . 'index.php', 'type' => 'file', 'name' => 'index.php'],
-  'Data Produk' => ['link' => BASE_URL . 'produk/', 'type' => 'folder', 'name' => 'produk'],
+  'Data Brand' => ['link' => BASE_URL . 'brand/', 'type' => 'folder', 'name' => 'brand'],
   'Data Kategori' => ['link' => BASE_URL . 'kategori/', 'type' => 'folder', 'name' => 'kategori'],
+  'Data Produk' => ['link' => BASE_URL . 'produk/', 'type' => 'folder', 'name' => 'produk'],
   'Transaksi' => ['link' => BASE_URL . 'transaksi/', 'type' => 'folder', 'name' => 'transaksi'],
   'Kelola User' => ['link' => BASE_URL . 'user.php', 'type' => 'file', 'name' => 'user.php'],
   'Banner & Promo' => ['link' => BASE_URL . 'promo/', 'type' => 'folder', 'name' => 'promo'],
