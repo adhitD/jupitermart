@@ -1,0 +1,337 @@
+/* ============================================================
+   🔵 GLOBAL & RESET
+=============================================================== */
+html {
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ============================================================
+   🔵 HEADER
+=============================================================== */
+.header {
+  background: #0d2464;
+  height: 60px;
+  padding: 0 30px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.header .admin-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.header .admin-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* Toggle sidebar button (mobile) */
+.header #toggleSidebar {
+  display: none;
+  background: #0d2464;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   🔵 SIDEBAR
+=============================================================== */
+.sidebar {
+  background: #fff;
+  width: 240px;
+  height: 100vh;
+  padding-top: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #eee;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar ul li {
+  padding: 13px 25px;
+  margin: 4px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: #e8edff;
+  color: #0d2464;
+  font-weight: 600;
+}
+
+.sidebar ul li a {
+  color: inherit;
+  display: block;
+}
+
+/* ============================================================
+   🔵 MAIN CONTENT
+=============================================================== */
+.main {
+  margin-left: 260px;
+  padding: 110px 35px;
+  background-color: #fff;
+}
+
+/* Page header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ============================================================
+   🔵 CARD
+=============================================================== */
+.card {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+/* ============================================================
+   🔵 TABLE
+=============================================================== */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* scroll horizontal di mobile */
+}
+
+table {
+  width: 100%;
+  min-width: 500px; /* optional: supaya scroll muncul saat layar kecil */
+  border-collapse: collapse;
+}
+
+table thead {
+  background: #eef2ff;
+}
+
+table th,
+table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap; /* mencegah isi td wrap */
+}
+
+/* Optional scrollbar styling */
+.table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================================
+   🔵 BADGE
+=============================================================== */
+.badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-success {
+  background: #d5ffe7;
+  color: #098b51;
+}
+
+.badge-danger {
+  background: #ffe1e1;
+  color: #b10000;
+}
+
+.badge-warning {
+  background: #fff3cd;
+  color: #8a6d3b;
+}
+
+/* ============================================================
+   🔵 BUTTON
+=============================================================== */
+.btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background: #0d2464;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #09214d;
+}
+
+.btn-danger {
+  background: #d20000;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #a80000;
+}
+
+.btn-warning {
+  background: orange;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #cc7a00;
+}
+
+/* ============================================================
+   🔵 FORM
+=============================================================== */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ============================================================
+   🔵 DASHBOARD CARD
+=============================================================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.dashboard-card h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.dashboard-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d2464;
+}
+
+/* ============================================================
+   🔵 RESPONSIVE
+=============================================================== */
+
+/* Toggle sidebar & main content */
+@media (max-width: 768px) {
+  .header #toggleSidebar {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 200px;
+    padding-top: 60px;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 90px 15px 35px 15px;
+  }
+}
+
+/* Untuk mobile, tabel tetap scroll horizontal */
+@media (max-width: 480px) {
+  .table-container {
+    overflow-x: auto;
+  }
+}
