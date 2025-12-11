@@ -1,5 +1,8 @@
-<?php include '../layouts/header.php'; ?>
-<?php include '../layouts/sidebar.php'; ?>
+<?php
+include '../layouts/header.php';
+include '../layouts/sidebar.php';
+include '../../databases/koneksi.php';
+?>
 
 <div class="main">
   <div class="page-header">
@@ -7,39 +10,57 @@
   </div>
 
   <div class="card">
-    <form action="store.php" method="POST">
+    <form action="../../databases/produk/prosesCreate.php" method="POST" enctype="multipart/form-data">
+
       <div class="form-group">
-        <label for="nama_produk">Nama Produk</label>
-        <input type="text" id="nama_produk" name="nama_produk" placeholder="Masukkan nama produk" required>
+        <label for="brand_id">Brand</label>
+        <select id="brand_id" name="brand_id">
+          <option value="">-- Pilih Brand --</option>
+          <?php
+          $brands = $conn->query("SELECT id, name FROM brands ORDER BY name ASC");
+          while ($brand = $brands->fetch_assoc()):
+          ?>
+            <option value="<?= $brand['id']; ?>"><?= $brand['name']; ?></option>
+          <?php endwhile; ?>
+        </select>
       </div>
 
       <div class="form-group">
-        <label for="kategori">Kategori</label>
-        <select id="kategori" name="kategori" required>
+        <label for="category_id">Kategori</label>
+        <select id="category_id" name="category_id" required>
           <option value="">-- Pilih Kategori --</option>
-          <option value="sembako">Sembako</option>
-          <option value="minuman">Minuman</option>
-          <option value="snack">Snack</option>
-          <!-- Bisa ambil dari database juga -->
+          <?php
+          $categories = $conn->query("SELECT id, name FROM categories ORDER BY name ASC");
+          while ($cat = $categories->fetch_assoc()):
+          ?>
+            <option value="<?= $cat['id']; ?>"><?= $cat['name']; ?></option>
+          <?php endwhile; ?>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="harga">Harga (Rp)</label>
-        <input type="number" id="harga" name="harga" placeholder="Masukkan harga produk" required>
+        <label for="name">Nama Produk</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama produk" required>
       </div>
 
       <div class="form-group">
-        <label for="stok">Stok</label>
-        <input type="number" id="stok" name="stok" placeholder="Masukkan jumlah stok" required>
+        <label for="description">Deskripsi</label>
+        <textarea id="description" name="description" placeholder="Masukkan deskripsi produk"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="status">Status</label>
-        <select id="status" name="status" required>
-          <option value="aktif">Aktif</option>
-          <option value="tidak_aktif">Tidak Aktif</option>
-        </select>
+        <label for="price">Harga</label>
+        <input type="number" id="price" name="price" placeholder="Masukkan harga" required step="0.01">
+      </div>
+
+      <div class="form-group">
+        <label for="stock">Stok</label>
+        <input type="number" id="stock" name="stock" placeholder="Masukkan stok" required>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Gambar Produk</label>
+        <input type="file" id="image" name="image" accept="image/*">
       </div>
 
       <button type="submit" class="btn btn-primary">Simpan Produk</button>

@@ -1,5 +1,8 @@
-<?php include 'layouts/header.php'; ?>
-<?php include 'layouts/sidebar.php'; ?>
+<?php
+include 'layouts/header.php';
+include 'layouts/sidebar.php';
+include '../databases/koneksi.php'; // pastikan koneksi ke database
+?>
 
 <div class="main">
   <div class="page-title">Dashboard</div>
@@ -7,7 +10,13 @@
   <div class="cards">
     <div class="card">
       <h4>Total Produk</h4>
-      <div class="value">1.250</div>
+      <div class="value">
+        <?php
+        $result = $conn->query("SELECT COUNT(*) AS total FROM products");
+        $row = $result->fetch_assoc();
+        echo $row['total'];
+        ?>
+      </div>
     </div>
 
     <div class="card">
