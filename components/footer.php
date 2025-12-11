@@ -24,13 +24,13 @@
           <li><a href="#">YouTube</a></li>
         </ul>
       </div>
-      <!-- <div class="footer-col">
+      <div class="footer-col">
         <h4>Unduh Aplikasi</h4>
         <div class="app-badges">
           <span>Google Play</span>
           <span>App Store</span>
         </div>
-      </div> -->
+      </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Abdi Mart. All rights reserved.</p>

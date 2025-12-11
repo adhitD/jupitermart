@@ -1,20 +1,23 @@
 <aside class="side-nav">
         <div class="side-block">
-          <h3>Kategori Utama</h3>
-          <ul>
-            <?php 
-            
-            ?>
-            <li><a href="#" data-category="semua" class="category-link active">Semua Produk</a></li>
-            <li><a href="#" data-category="sembako" class="category-link">Sembako & Harian</a></li>
-            <li><a href="#" data-category="kecantikan" class="category-link">Kecantikan & Skincare</a></li>
-            <li><a href="#" data-category="elektronik" class="category-link">Elektronik & Gadget</a></li>
-            <li><a href="#" data-category="fashion" class="category-link">Fashion</a></li>
-            <li><a href="#" data-category="rumah" class="category-link">Rumah & Living</a></li>
-            <li><a href="#" data-category="minimarket" class="category-link">Minimarket</a></li>
-          </ul>
-        </div>
-
+    <h3>Kategori Utama</h3>
+    <ul>
+        <li>
+            <a href="#" data-category="all" class="category-link active">
+                Semua Produk
+            </a>
+        </li>
+        <?php foreach ($categories as $cat): ?>
+            <li>
+                <a href="#" 
+                   data-category="<?= strtolower($cat['id']) ?>" 
+                   class="category-link">
+                    <?= htmlspecialchars($cat['nama_kategori']) ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
         <div class="side-block">
           <h3>Promo Cepat</h3>
           <ul>
