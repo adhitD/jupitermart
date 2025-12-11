@@ -2,6 +2,9 @@
         <div class="side-block">
           <h3>Kategori Utama</h3>
           <ul>
+            <?php 
+            
+            ?>
             <li><a href="#" data-category="semua" class="category-link active">Semua Produk</a></li>
             <li><a href="#" data-category="sembako" class="category-link">Sembako & Harian</a></li>
             <li><a href="#" data-category="kecantikan" class="category-link">Kecantikan & Skincare</a></li>
