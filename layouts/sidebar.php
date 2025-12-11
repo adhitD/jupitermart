@@ -2,13 +2,14 @@
   <div class="side-block">
     <h3>Kategori Utama</h3>
     <ul>
-      <li><a href="#" data-category="semua" class="category-link active">Semua Produk</a></li>
-      <li><a href="#" data-category="sembako" class="category-link">Sembako & Harian</a></li>
-      <li><a href="#" data-category="kecantikan" class="category-link">Kecantikan & Skincare</a></li>
-      <li><a href="#" data-category="elektronik" class="category-link">Elektronik & Gadget</a></li>
-      <li><a href="#" data-category="fashion" class="category-link">Fashion</a></li>
-      <li><a href="#" data-category="rumah" class="category-link">Rumah & Living</a></li>
-      <li><a href="#" data-category="minimarket" class="category-link">Minimarket</a></li>
+      <?php 
+      $query = "SELECT * FROM categories";
+      $result = mysqli_query($conn,$query);
+      while($row = mysqli_fetch_assoc($result)) :
+      ?>
+      <li><a href="#" data-category="<?=$row['name']?>" class="category-link "><?=$row['name']?></a></li>
+      <?php endwhile ?>
+     
     </ul>
   </div>
 

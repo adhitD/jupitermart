@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function prevSlide() {
-    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    const prevIndex =
+      (currentIndex - 1 + slides.length) % slides.length;
     showSlide(prevIndex);
   }
 

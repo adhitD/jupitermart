@@ -4,7 +4,7 @@
       <div class="hero-text">
         <h1>Belanja Nyaman di Abdi Mart</h1>
         <p>Semua kebutuhan harian, kecantikan, dan elektronik dalam satu marketplace dengan pengiriman cepat.</p>
-        <button class="primary-btn">Belanja Sekarang</button>
+        <a href="#flash-sale" class="primary-btn">Belanja Sekarang</a href="#flash-sale">
       </div>
       <div class="hero-image">
         <div class="hero-illustration">Banner Utama</div>

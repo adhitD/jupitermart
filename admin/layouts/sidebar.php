@@ -16,7 +16,6 @@ $menu_items = [
   'Data Kategori' => ['link' => BASE_URL . 'kategori/', 'type' => 'folder', 'name' => 'kategori'],
   'Data Produk' => ['link' => BASE_URL . 'produk/', 'type' => 'folder', 'name' => 'produk'],
   'Transaksi' => ['link' => BASE_URL . 'transaksi/', 'type' => 'folder', 'name' => 'transaksi'],
-  'Kelola User' => ['link' => BASE_URL . 'user.php', 'type' => 'file', 'name' => 'user.php'],
   'Banner & Promo' => ['link' => BASE_URL . 'promo/', 'type' => 'folder', 'name' => 'promo'],
   'Pengaturan' => ['link' => BASE_URL . 'pengaturan/', 'type' => 'folder', 'name' => 'pengaturan'],
 ];

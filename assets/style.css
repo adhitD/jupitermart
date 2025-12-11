@@ -1,6 +1,6 @@
 :root {
-  --primary: #172c66;
-  --bg: #fef6e4;
+  --primary: #99acff;
+  --bg: #ffffff;
   --text: #222222;
   --muted: #777777;
   --card-bg: #ffffff;
@@ -344,7 +344,7 @@ button {
 .primary-btn {
   padding: 0.45rem 1.1rem;
   border-radius: 999px;
-  background-color: #001858;
+  background-color: #4c65ff;
   color: #ffffff;
   font-size: 0.85rem;
   font-weight: 600;
