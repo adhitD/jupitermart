@@ -423,10 +423,18 @@ button {
   border-radius: var(--radius-sm);
   border: 1px dashed #ddddff;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+ .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* KUNCI: isi kotak tanpa distorsi */
+    object-position: center;
 }
 
 .product-card h3 {
@@ -450,7 +458,9 @@ button {
 
 .product-badge {
   align-self: flex-start;
-  padding: 0.12rem 0.45rem;
+   display: inline-block;   /* Kunci: ukuran mengikuti isi */
+    padding: 4px 8px;        /* Sesuaikan ketebalan */     
+
   border-radius: 999px;
   background-color: #ffede9;
   color: #e63946;

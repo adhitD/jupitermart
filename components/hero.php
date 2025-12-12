@@ -1,3 +1,18 @@
+<?php 
+include 'databases/koneksi.php';
+
+
+$query = $conn->query("
+    SELECT p.image
+    FROM flash_sales fs
+    JOIN products p ON fs.product_id = p.id
+    ORDER BY fs.id DESC
+    LIMIT 1
+");
+
+$flash = $query->fetch_assoc();
+?>
+
 <section class="hero">
   <div class="hero-slider">
     <div class="hero-slide active" data-index="0">
@@ -7,7 +22,7 @@
         <a href="#flash-sale" class="primary-btn">Belanja Sekarang</a href="#flash-sale">
       </div>
       <div class="hero-image">
-        <div class="hero-illustration">Banner Utama</div>
+        <div class="hero-illustration"><img src="assets/images/banner.jpg" alt=""></div>
       </div>
     </div>
 
@@ -18,7 +33,7 @@
         <button class="primary-btn">Lihat Flash Sale</button>
       </div>
       <div class="hero-image">
-        <div class="hero-illustration">Flash Sale</div>
+        <div class="hero-illustration"><img src="admin/assets/image/produk/<?=$flash['image']?>" alt="ts"></div>
       </div>
     </div>
 

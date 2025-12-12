@@ -8,34 +8,47 @@
   </div>
   <div class="product-grid">
     <?php
-  $query = $conn->query("
-    SELECT p.*, 
-           c.name AS category_name,
-           c.id AS category_id
-    FROM products p
+ $query = $conn->query("
+    SELECT 
+        p.id AS product_id,
+        p.name AS product_name,
+        p.image,
+        p.price AS original_price,
+
+        c.id AS category_id,
+        c.name AS category_name,
+
+        fs.discount_percent,
+
+       
+        (p.price - (p.price * fs.discount_percent / 100)) AS final_price
+
+    FROM flash_sales fs
+    JOIN products p ON fs.product_id = p.id
     JOIN categories c ON p.category_id = c.id
-    ORDER BY p.id DESC
+    ORDER BY fs.id DESC
 ");
 
+$flash = $query->fetch_all(MYSQLI_ASSOC);
 
-
-$products = $query->fetch_all(MYSQLI_ASSOC);
-
-if (count($products) > 0):
-foreach($products as $p):
+if (count($flash) > 0):
+foreach($flash as $p):
       ?>
     <article class="product-card" data-category="<?= $p['category_id']?>">
       <?php 
-       if ($p['diskon'] > 0): ?>
+       if ($p['discount_percent'] > 0): ?>
     <div class="product-badge">
-        <?= round($p['diskon']) ?>%
+        <?= round($p['discount_percent']) ?>%
     </div>
 <?php endif; ?>
 
-      <div class="product-image"><img src="uploads/<?= $p['image'] ?>">
+      <div class="product-image"><img class="img" src="admin/assets/image/produk/<?= $p['image'] ?>" style=" width: 100%;
+    height: 100%;
+    object-fit: cover;     /* KUNCI: isi kotak tanpa distorsi */
+    object-position: center;">
 </div>
-      <h3><?=$p['name']?></h3>
-      <p class="product-price">Rp<?php number_format($p['price'],0,',','.') ?> <span class="price-strike">Rp120.000</span></p>
+      <h3><?=$p['product_name']?></h3>
+      <p class="product-price">Rp<?php number_format($p['original_price'],0,',','.') ?> <span class="price-strike">Rp120.000</span></p>
       <button class="secondary-btn">Tambah ke Keranjang</button>
     </article>
 <?php  endforeach; 

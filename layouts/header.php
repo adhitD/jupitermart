@@ -9,7 +9,6 @@
 
     <div class="header-actions">
       <button class="icon-btn"><span class="icon">🛒</span><span class="label">Keranjang</span></button>
-      <button class="icon-btn"><span class="icon">❤️</span><span class="label">Favorit</span></button>
       <button class="icon-btn"><span class="icon">👤</span><span class="label">Akun</span></button>
     </div>
   </div>
