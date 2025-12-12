@@ -19,7 +19,7 @@ $flash = $query->fetch_assoc();
       <div class="hero-text">
         <h1>Belanja Nyaman di Abdi Mart</h1>
         <p>Semua kebutuhan harian, kecantikan, dan elektronik dalam satu marketplace dengan pengiriman cepat.</p>
-        <a href="#flash-sale" class="primary-btn">Belanja Sekarang</a href="#flash-sale">
+        <a href="#official-store" class="primary-btn">Belanja Sekarang</a href="#flash-sale">
       </div>
       <div class="hero-image">
         <div class="hero-illustration"><img src="assets/images/banner.jpg" alt=""></div>
@@ -30,7 +30,7 @@ $flash = $query->fetch_assoc();
       <div class="hero-text">
         <h1>Flash Sale Setiap Hari</h1>
         <p>Dapatkan diskon s/d 70% untuk produk pilihan dari berbagai brand favorit.</p>
-        <button class="primary-btn">Lihat Flash Sale</button>
+        <a href="#flash-sale" class="primary-btn">Lihat Flash Sale</a>
       </div>
       <div class="hero-image">
         <div class="hero-illustration"><img src="admin/assets/image/produk/<?=$flash['image']?>" alt="ts"></div>
@@ -39,12 +39,12 @@ $flash = $query->fetch_assoc();
 
     <div class="hero-slide" data-index="2">
       <div class="hero-text">
-        <h1>Official Store Terpercaya</h1>
-        <p>Belanja langsung dari brand resmi seperti Miniso, Sociolla, dan lainnya.</p>
-        <button class="primary-btn">Jelajahi Brand</button>
+        <h1>Abdi Mart Store Terpercaya</h1>
+        <p>Belanja Lebih Cepat, Harga Lebih Hemat. </p>
+        <a href="#official-store" class="primary-btn">Jelajahi Store</a>
       </div>
-      <div class="hero-image">
-        <div class="hero-illustration">Official Store</div>
+      <div class="hero-image" style=" overflow: hidden;  ">
+        <div class="hero-illustration"><img src="assets/images/cosmetic.jpg" class="object-fit:cover" alt=""></div>
       </div>
     </div>
   </div>
