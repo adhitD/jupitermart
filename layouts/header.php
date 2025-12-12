@@ -9,7 +9,34 @@
 
     <div class="header-actions">
       <button class="icon-btn"><span class="icon">🛒</span><span class="label">Keranjang</span></button>
-      <button class="icon-btn"><span class="icon">👤</span><span class="label">Akun</span></button>
+<div class="account-dropdown">
+    <button class="icon-btn account-btn">
+        <span class="icon">👤</span><span class="label">Akun</span>
+    </button>
+
+    <div class="dropdown-menu">
+
+        <?php if (!isset($_SESSION['user_id'])): ?>
+
+            <a href="admin/login.php">Login</a>
+            <a href="admin/register.php">Daftar</a>
+
+        <?php else: ?>
+
+            <p class="user-info">Halo, <?= $_SESSION['name'] ?></p>
+            <a href="user/profile.php">Profil Saya</a>
+            <a href="user/orders.php">Pesanan Saya</a>
+
+            <?php if ($_SESSION['role'] === 'admin'): ?>
+                <a href="admin/index.php">Dashboard Admin</a>
+            <?php endif; ?>
+
+            <a href="logout.php" class="logout">Logout</a>
+
+        <?php endif; ?>
+
+    </div>
+</div>
     </div>
   </div>
 

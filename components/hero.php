@@ -1,5 +1,5 @@
 <?php 
-include 'databases/koneksi.php';
+// include 'databases/koneksi.php';
 
 
 $query = $conn->query("
@@ -17,7 +17,7 @@ $flash = $query->fetch_assoc();
   <div class="hero-slider">
     <div class="hero-slide active" data-index="0">
       <div class="hero-text">
-        <h1>Belanja Nyaman di Abdi Mart</h1>
+        <h1>Belanja Nyaman di SkinMart</h1>
         <p>Semua kebutuhan harian, kecantikan, dan elektronik dalam satu marketplace dengan pengiriman cepat.</p>
         <a href="#official-store" class="primary-btn">Belanja Sekarang</a href="#flash-sale">
       </div>
@@ -33,18 +33,18 @@ $flash = $query->fetch_assoc();
         <a href="#flash-sale" class="primary-btn">Lihat Flash Sale</a>
       </div>
       <div class="hero-image">
-        <div class="hero-illustration"><img src="admin/assets/image/produk/<?=$flash['image']?>" alt="ts"></div>
+        <div class="hero-illustration"><img src="/jupitermart/admin/assets/image/produk/<?=$flash['image']?>" alt="ts"></div>
       </div>
     </div>
 
     <div class="hero-slide" data-index="2">
       <div class="hero-text">
-        <h1>Abdi Mart Store Terpercaya</h1>
+        <h1>SkinMart Store Terpercaya</h1>
         <p>Belanja Lebih Cepat, Harga Lebih Hemat. </p>
         <a href="#official-store" class="primary-btn">Jelajahi Store</a>
       </div>
       <div class="hero-image" style=" overflow: hidden;  ">
-        <div class="hero-illustration"><img src="assets/images/cosmetic.jpg" class="object-fit:cover" alt=""></div>
+        <div class="hero-illustration"><img src="/jupitermart/assets/images/cosmetic.jpg" class="object-fit:cover" alt=""></div>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 :root {
-  --primary: #172c66;
+  --primary: #FC6C85;
   --bg: #fef6e4;
   --text: #222222;
   --muted: #777777;
@@ -648,3 +648,4 @@ button {
     padding: 0.8rem;
   }
 }
+
