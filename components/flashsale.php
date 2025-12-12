@@ -49,7 +49,7 @@ foreach($flash as $p):
 </div>
       <h3><?=$p['product_name']?></h3>
       <p class="product-price">Rp<?=number_format( $p['final_price'],'0',',','.') ?> <span class="price-strike">Rp<?=number_format($p['original_price'],'0',',','.')?></span></p>
-      <button class="secondary-btn">Tambah ke Keranjang</button>
+<button class="secondary-btn" onclick="addFlashSale(<?= $p['product_id'] ?>)">Tambah ke Keranjang</button>
     </article>
 <?php  endforeach; 
 else:?>
@@ -65,28 +65,20 @@ else:?>
     </article>
     <?php 
 endif;?>
-    <!-- <article class="product-card" data-category="kecantikan">
-      <div class="product-badge">-45%</div>
-      <div class="product-image">Gambar</div>
-      <h3>Serum Wajah Brightening</h3>
-      <p class="product-price">Rp75.000 <span class="price-strike">Rp135.000</span></p>
-      <button class="secondary-btn">Tambah ke Keranjang</button>
-    </article>
-
-    <article class="product-card" data-category="elektronik">
-      <div class="product-badge">-25%</div>
-      <div class="product-image">Gambar</div>
-      <h3>Earphone Wireless</h3>
-      <p class="product-price">Rp220.000 <span class="price-strike">Rp299.000</span></p>
-      <button class="secondary-btn">Tambah ke Keranjang</button>
-    </article>
-
-    <article class="product-card" data-category="minimarket">
-      <div class="product-badge">-15%</div>
-      <div class="product-image">Gambar</div>
-      <h3>Snack Bundle Alfamart</h3>
-      <p class="product-price">Rp35.000 <span class="price-strike">Rp45.000</span></p>
-      <button class="secondary-btn">Tambah ke Keranjang</button>
-    </article> -->
+   
   </div>
 </section>
+<script>
+  function addFlashSale(productId) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/skinmart/databases/cart/create_flash.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function () {
+        alert(xhr.responseText);
+    };
+
+    xhr.send("product_id=" + productId);
+}
+
+</script>

@@ -8,7 +8,7 @@
     </form>
 
     <div class="header-actions">
-      <a href="../fixpembayaran.php" class="icon-btn"><span class="icon">🛒</span><span class="label">Keranjang</span></button>
+      <a href="fixpembayaran.php" class="icon-btn"><span class="icon">🛒</span><span class="label">Keranjang</span></button>
 <div class="account-dropdown">
     <button class="icon-btn account-btn">
         <span class="icon">👤</span><span class="label">Akun</span>

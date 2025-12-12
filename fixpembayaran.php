@@ -1,8 +1,11 @@
 
+<link rel="stylesheet" href="assets/css/style.css
+">
 <?php 
 
 
-include 'layouts/header.php'
+include 'layouts/header.php';
+include 'layouts/header.php';
 ?>
 <body>
   <div class="container">

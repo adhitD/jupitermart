@@ -1,6 +1,6 @@
 <?php
 if (!defined('BASE_URL')) {
-  define('BASE_URL', '/jupitermart/admin/');
+  define('BASE_URL', '/skinmart/admin/');
 }
 
 $current_folder = basename(dirname($_SERVER['PHP_SELF']));

@@ -1,5 +1,4 @@
 <?php
-include '../databases/koneksi.php';
 ?>
 <section id="official-store" class="product-section">
   <div class="section-header">
@@ -48,7 +47,7 @@ endif;?>
 <script>
   function addToCart(id) {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "/skinmart/databases/cart/create.php", true);
+    xhr.open("POST", "/skinmart/databases/cart/create_store.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onload = function () {
@@ -63,7 +62,7 @@ endif;?>
                 alert("Jumlah produk ditambah.");
                 break;
             default:
-                alert("Terjadi kesalahan: " + xhr.responseText);
+                alert(xhr.responseText);
         }
     };
 
