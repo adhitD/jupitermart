@@ -74,7 +74,7 @@
         <?php include '../components/hero.php'; ?>
         <?php include '../components/flashsale.php'; ?>
         <?php include '../components/brandfavorit.php'; ?>
-        <?php include '../components/voucherpromo.php'; ?>
+        <!-- <?php include '../components/voucherpromo.php'; ?> -->
         <?php include '../components/ofcstore.php'; ?>
         <?php include '../components/bantuan.php'; ?>
       </section>

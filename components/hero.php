@@ -33,7 +33,7 @@ $flash = $query->fetch_assoc();
         <a href="#flash-sale" class="primary-btn">Lihat Flash Sale</a>
       </div>
       <div class="hero-image">
-        <div class="hero-illustration"><img src="/jupitermart/admin/assets/image/produk/<?=$flash['image']?>" alt="ts"></div>
+        <div class="hero-illustration"><img src="/skinmart/admin/assets/image/produk/<?=$flash['image']?>" alt="ts"></div>
       </div>
     </div>
 
