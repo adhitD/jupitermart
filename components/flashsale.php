@@ -42,13 +42,13 @@ foreach($flash as $p):
     </div>
 <?php endif; ?>
 
-      <div class="product-image"><img class="img" src="/jupitermart/admin/assets/image/produk/<?= $p['image'] ?>" style=" width: 100%;
+      <div class="product-image"><img class="img" src="/skinmart/admin/assets/image/produk/<?= $p['image'] ?>" style=" width: 100%;
     height: 100%;
     object-fit: cover;     /* KUNCI: isi kotak tanpa distorsi */
     object-position: center;">
 </div>
       <h3><?=$p['product_name']?></h3>
-      <p class="product-price">Rp<?php number_format($p['final_price'],0,',','.') ?> <span class="price-strike"><?=$p['original_price']?></span></p>
+      <p class="product-price">Rp<?=number_format( $p['final_price'],'0',',','.') ?> <span class="price-strike">Rp<?=number_format($p['original_price'],'0',',','.')?></span></p>
       <button class="secondary-btn">Tambah ke Keranjang</button>
     </article>
 <?php  endforeach; 

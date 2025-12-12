@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="top-bar container">
-    <div class="logo">Abdi<span>Mart</span></div>
+    <div class="logo">Skin<span>Mart</span></div>
 
     <form class="search-bar">
       <input type="text" placeholder="Cari produk, brand, atau kategori..." />
@@ -8,7 +8,7 @@
     </form>
 
     <div class="header-actions">
-      <button class="icon-btn"><span class="icon">🛒</span><span class="label">Keranjang</span></button>
+      <a href="../fixpembayaran.php" class="icon-btn"><span class="icon">🛒</span><span class="label">Keranjang</span></button>
 <div class="account-dropdown">
     <button class="icon-btn account-btn">
         <span class="icon">👤</span><span class="label">Akun</span>
@@ -18,8 +18,8 @@
 
         <?php if (!isset($_SESSION['user_id'])): ?>
 
-            <a href="admin/login.php">Login</a>
-            <a href="admin/register.php">Daftar</a>
+            <a href="/skinmart/login.php">Login</a>
+            <a href="/skinmart/register.php">Daftar</a>
 
         <?php else: ?>
 

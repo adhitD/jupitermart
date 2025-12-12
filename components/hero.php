@@ -22,7 +22,7 @@ $flash = $query->fetch_assoc();
         <a href="#official-store" class="primary-btn">Belanja Sekarang</a href="#flash-sale">
       </div>
       <div class="hero-image">
-        <div class="hero-illustration"><img src="assets/images/banner.jpg" alt=""></div>
+        <div class="hero-illustration"><img src="/skinmart/assets/images/banner.jpg" alt=""></div>
       </div>
     </div>
 
@@ -44,7 +44,7 @@ $flash = $query->fetch_assoc();
         <a href="#official-store" class="primary-btn">Jelajahi Store</a>
       </div>
       <div class="hero-image" style=" overflow: hidden;  ">
-        <div class="hero-illustration"><img src="/jupitermart/assets/images/cosmetic.jpg" class="object-fit:cover" alt=""></div>
+        <div class="hero-illustration"><img src="/skinmart/assets/images/cosmetic.jpg" class="object-fit:cover" alt=""></div>
       </div>
     </div>
   </div>
